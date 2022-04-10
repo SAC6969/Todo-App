@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>TODO APP</h1>
+        <form action="/add-task" method="post">
+            <div class="description">
+                <li>DESCRIPTION<li><textarea id="textarea" name="textarea" placeholder="What do you need to do?" required></textarea>
+            </div>
+            <div class="cate-date">
+                <div class="category">
+                    <li>CATEGORY</li>
+                    <select name="todo" required>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>        
+                </div>
+                <div class="date-cont">
+                    <li>DUE DATE</li>
+                    <input class="date" name="date" type="date" name="date" required>
+                </div>
+            </div>
+            <button type="submit" id="submit">
+                <i class="fa-solid fa-plus"></i>
+                <span>ADD TASK</span>
+            </button>
+            <!-- <span class="delete-button">
+                <a href="">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span>Delete</span>
+                </a>
+            </span> -->
+        </form>
+        
+        <!-- </i> -->
+
+        <div class="show-container">
+            <form action="/delete-task" method="get">
+                <% for(let i of todo) {%>
+                    <div class="for-flex">
+                        <div class="tasks">
+                            <input class="check" type="checkbox" id="scales" name="<%= i._id %>">
+                            <label for="scales"><%= i.textarea %></label>
+                            <div class="cal">
+                                <i class="fa-solid fa-calendar-days calender"></i>
+                                <span><%= i.date %></span>
+                            </div>
+                        </div>
+                        <div class="category-work <%= i.todo %>">
+                            <%= i.todo %>
+                        </div>
+                    </div>
+                <%}%>
+                <div class="move">
+                    <div class="input-icon">
+                        <i class="fa-solid fa-trash-can trash"></i>
+                        <input type="submit" class="delete-button" value="delete-task" >
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
+</body>
+</html>

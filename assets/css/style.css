@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-color: #b2bec3;
+}
+
+h1{
+    color: #535c68;
+    margin-top: 1rem;
+    text-align: center;
+}
+.form-container{
+    height: 42rem;
+    width: 40rem;
+    background-color: white;
+    margin: 50px auto;
+}
+
+form{
+    color: #57606f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+textarea{
+    outline: none;
+    height: 1.5rem;
+    width: 34rem;
+    resize: none;
+    border: none;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    height: 3.5rem;
+    padding-left: 0.9rem;
+    border-top: 1px solid #bdc3c7;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.description:hover{
+    background-color: #c8d6e5;
+}
+
+.cate-date{
+    display: flex;
+    border-bottom: 1px solid #bdc3c7;
+    height: 3.5rem;
+    width: 40rem;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 0.9rem;
+    border-right: 1px solid #bdc3c7;
+}
+
+select{
+    margin-top: 0.3rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+option{
+    cursor: pointer;
+    color: #57606f;
+}
+.date-cont{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 0.9rem;
+}
+
+.date{
+    margin-top: 0.3rem;
+    outline: none;
+    border: none;
+}
+
+#submit{   
+    outline: none;
+    border: none;
+    color: white;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    margin: 1rem 16rem;
+    cursor: pointer;
+}
+
+.show-container{
+    height: 25rem;
+    border-top: 1px solid #bdc3c7;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #57606f;
+
+}
+
+.cal>span{
+    font-size: 0.75rem;
+    font-weight: 550;
+    color: #57606f;
+}
+
+.tasks{
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 3.5rem;
+    
+}
+.check{
+    margin-top: 0.4rem;
+}
+
+.cal{
+    margin-top: 0.2rem;
+    margin-left: 1.4rem;
+}
+.calender{
+    font-size: 1rem;
+    color: #57606f;
+}
+
+.category-work{
+    height: 2rem;
+    width: 6rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.delete-button{   
+    outline: none;
+    border: none;
+    color: white;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+    margin: 2rem 16rem;
+    background-color: #e74c3c;
+    cursor: pointer;
+}
+
+.input-icon{
+    position: relative;
+}
+
+.input-icon i{
+    color: white;
+    position: absolute;
+    top: 2.6rem; 
+    left: 16.4rem;
+} 
+/* 
+.move{
+    position: sticky;
+} */
+
+.Personal{
+    background-color: #8e44ad;
+    color: white;
+}
+
+.Work{
+    background-color: #EE5A24;
+    color: white;
+}
+
+.Cleaning{
+    background-color: #f39c12;
+    color: white;
+}
+
+.School{
+    background-color: #833471;
+    color: white;
+}
+
+.Other{
+    background-color: #0097e6;
+    color: white;
+}
+
+input[type=checkbox]{
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+}
+
+.category:hover {
+    background-color: #c8d6e5;
+}
+
+textarea , .date{
+    background-color: transparent;
+}
+
+
+.date-cont:hover{
+    background-color: #c8d6e5;
+}
+
+.show-container{
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
